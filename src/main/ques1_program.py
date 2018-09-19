@@ -37,8 +37,3 @@ class MyClass(object):
         except Exception as e:
             raise e
         
-
-if __name__ == "__main__":
-    obj = MyClass()
-    
-    print(obj.is_starts_or_ends_with("sarvesh","sar")) 

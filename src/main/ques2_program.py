@@ -46,9 +46,4 @@ class MyClass(object):
         
         except Exception as e:
             raise e
-if __name__ == "__main__":
-    
-    obj = MyClass()
-    print(os.path.basename(__file__).split(".")[0])
-    #print(obj.get_valid_ip_list("sample_ips.csv"))
     

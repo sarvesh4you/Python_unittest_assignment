@@ -3,19 +3,17 @@ Created on 16-Sep-2018
 
 @author: sarveshshrivastava
 '''
-import unittest
-import os
-import logging
-import sys
-
-sys.path.append("D:\\sarveshshrivastava\\workspace\\Python_Assignment\\src")
-from main.ques2_program import MyClass as my_cls
+import unittest, os, logging, sys
 import HTMLTestRunner
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from main.ques2_program import MyClass as my_cls
 
 log = logging.getLogger("LogMessage: ")
-csv_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),"test_data")
-reports_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),"test_reports")
+
+csv_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "test_data")
+reports_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "test_reports")
+
 csv_path = csv_dir + "\\sample_ips.csv"
 corrupt_csv_path = csv_dir + "\\corrupt.csv"
 no_file = csv_dir + "\\no_file.csv"
@@ -57,7 +55,7 @@ if __name__ == "__main__":
     logging.getLogger("LogMessage: ").setLevel(logging.DEBUG)
     suite = unittest.TestLoader().loadTestsFromTestCase(TestQuestion2Program)
   
-    outfile = open(reports_path+"\\TestReport_"+os.path.basename(__file__).split(".")[0]+".html", "w")
+    outfile = open(reports_path + "\\TestReport_" + os.path.basename(__file__).split(".")[0] + ".html", "w")
     runner = HTMLTestRunner.HTMLTestRunner(
                 stream=outfile,
                 title='Test Report : GlobalLogic Python UnitTest Assignment',
