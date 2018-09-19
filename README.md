@@ -8,7 +8,7 @@
 #### Framework and Package Structure:
   -Unittest Based Framework
   
-  ***It comprises three main folders:-***
+  ***It comprises two main folders:-***
   1) main
   2) test
   
