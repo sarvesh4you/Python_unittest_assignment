@@ -17,19 +17,19 @@ reports_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "test_re
 class TestQuestion1Program(unittest.TestCase):
 
     def test_01(self):
-        self.assertEqual(my_cls.is_starts_or_ends_with(self, "GlobalLogic", "Global"), "Given 'substr' is a prefix for 'mainstr'.")
+        self.assertEqual(my_cls.is_starts_or_ends_with(self, "TestData", "Test"), "Given 'substr' is a prefix for 'mainstr'.")
         log.debug("Test 1 : Passed")
 
     def test_02(self):
-        self.assertEqual(my_cls.is_starts_or_ends_with(self, "GlobalLogic", "Logic"), "Given 'substr' is a suffix for 'mainstr'.")
+        self.assertEqual(my_cls.is_starts_or_ends_with(self, "TestData", "Data"), "Given 'substr' is a suffix for 'mainstr'.")
         log.debug("Test 2 : Passed")
         
     def test_03(self):
-        self.assertEqual(my_cls.is_starts_or_ends_with(self, "GlobalLogic", ""), "'mainstr' or/and 'substr' must not be empty.")
+        self.assertEqual(my_cls.is_starts_or_ends_with(self, "TestData", ""), "'mainstr' or/and 'substr' must not be empty.")
         log.debug("Test 3 : Passed")
         
     def test_04(self):
-        self.assertEqual(my_cls.is_starts_or_ends_with(self, "", "Global"), "'mainstr' or/and 'substr' must not be empty.")
+        self.assertEqual(my_cls.is_starts_or_ends_with(self, "", "Test"), "'mainstr' or/and 'substr' must not be empty.")
         log.debug("Test 4 : Passed")
         
     def test_05(self):
@@ -38,13 +38,13 @@ class TestQuestion1Program(unittest.TestCase):
         
     def test_06(self):
         with self.assertRaises(TypeError):
-            my_cls.is_starts_or_ends_with(self, "GlobalLogic", 3)
+            my_cls.is_starts_or_ends_with(self, "TestData", 3)
         
         log.debug("Test 6 : Passed")
         
     def test_07(self):
         with self.assertRaises(TypeError):
-            my_cls.is_starts_or_ends_with(self, 3, "Logic")
+            my_cls.is_starts_or_ends_with(self, 3, "Data")
             
         log.debug("Test 7 : Passed")  
         
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     outfile = open(reports_path + "\\TestReport_" + os.path.basename(__file__).split(".")[0] + ".html", "w")
     runner = HTMLTestRunner.HTMLTestRunner(
                 stream=outfile,
-                title='Test Report : GlobalLogic Python UnitTest Assignment',
+                title='Test Report : Python UnitTest Demo',
                 description='Testing \'is_starts_or_ends_with(mainstr, substr)\' method'
                 )
   

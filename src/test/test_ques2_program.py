@@ -58,7 +58,7 @@ if __name__ == "__main__":
     outfile = open(reports_path + "\\TestReport_" + os.path.basename(__file__).split(".")[0] + ".html", "w")
     runner = HTMLTestRunner.HTMLTestRunner(
                 stream=outfile,
-                title='Test Report : GlobalLogic Python UnitTest Assignment',
+                title='Test Report : Python UnitTest Demo',
                 description='Testing \'get_valid_ip_list(csv file input)\' method'
                 )
   
